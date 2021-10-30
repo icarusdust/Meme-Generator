@@ -31,7 +31,7 @@ class App extends Component {
 
   handleSubmit = (e) =>{
     e.preventDefault()
-    const random = Math.floor(Math.random() * this.state.allImgs.length)
+    const random = Math.floor(crypto.getRandomValues() * this.state.allImgs.length)
     const rand = this.state.allImgs[random].url
     this.setState({randomImg :rand})
   }
